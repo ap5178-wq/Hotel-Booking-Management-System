@@ -1,9 +1,5 @@
 package com.hotelbooking;
 
-/**
- * Abstract representation of a hotel room
- * Defines common attributes shared by all room types
- */
 public abstract class Room {
 
     protected String roomType;
@@ -16,9 +12,9 @@ public abstract class Room {
         this.price = price;
     }
 
-    public void displayRoomInfo() {
+    public void displayRoomDetails() {
         System.out.println("Room Type: " + roomType);
         System.out.println("Beds: " + beds);
-        System.out.println("Price per night: $" + price);
+        System.out.println("Price: " + price);
     }
 }
