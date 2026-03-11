@@ -1,28 +1,24 @@
 package com.hotelbooking;
 
-public class Room {
+/**
+ * Abstract representation of a hotel room
+ * Defines common attributes shared by all room types
+ */
+public abstract class Room {
 
-    private int roomNumber;
-    private boolean isBooked;
+    protected String roomType;
+    protected int beds;
+    protected double price;
 
-    public Room(int roomNumber) {
-        this.roomNumber = roomNumber;
-        this.isBooked = false;
+    public Room(String roomType, int beds, double price) {
+        this.roomType = roomType;
+        this.beds = beds;
+        this.price = price;
     }
 
-    public int getRoomNumber() {
-        return roomNumber;
-    }
-
-    public boolean isBooked() {
-        return isBooked;
-    }
-
-    public void bookRoom() {
-        isBooked = true;
-    }
-
-    public void releaseRoom() {
-        isBooked = false;
+    public void displayRoomInfo() {
+        System.out.println("Room Type: " + roomType);
+        System.out.println("Beds: " + beds);
+        System.out.println("Price per night: $" + price);
     }
 }
